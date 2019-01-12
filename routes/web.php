@@ -17,4 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/acasa', 'HomeController@index')->name('home');
+
+Route::get('/instructiuni', 'InstructionsController@index')->name('instructions');
+
+Route::get('/pontare', 'ClockingController@index')->name('clocking');
+
+Route::prefix('panou')->group(function () {
+    Route::get('/', 'DashboardController@index')->name('panel_index');
+    Route::get('/index', 'DashboardController@index')->name('panel_index');
+    Route::get('/muncitori', 'DashboardController@workers')->name('panel_workers');
+});
