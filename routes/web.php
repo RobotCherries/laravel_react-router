@@ -28,3 +28,5 @@ Route::prefix('panou')->group(function () {
     Route::get('/index', 'DashboardController@index')->name('panel_index');
     Route::get('/muncitori', 'DashboardController@workers')->name('panel_workers');
 });
+
+Route::get('/setari', 'SettingsController@index')->name('settings');

@@ -52,15 +52,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('instructions') }}">{{ __('Instrucțiuni') }}</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('clocking') }}">{{ __('Pontare') }}</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('panel_index') }}">{{ __('Panou') }}</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('settings') }}">{{ __('Setări') }}</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
