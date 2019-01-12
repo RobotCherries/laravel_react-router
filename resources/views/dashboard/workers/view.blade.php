@@ -15,21 +15,20 @@
 
                 <h1>Workers View</h1>
                 
-                <table class="table">
-                    <thead>
+                <table class="table table table-bordered table-hover">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
                         </tr>
                     </thead>
                     <tbody>
                     @foreach ($workers as $worker)
                     <tr>
-                        <th scope="row">{{ $worker->id_worker }}</th>
+                        <th>{{ $worker->id_worker }}</th>
                         <td>{{ $worker->firstname }}</td>
                         <td>{{ $worker->lastname }}</td>
-                        <tr>
                     </tr>
                     @endforeach
                 </tbody>
