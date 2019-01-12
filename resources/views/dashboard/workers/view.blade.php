@@ -14,6 +14,28 @@
                 @endif
 
                 <h1>Workers View</h1>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($workers as $worker)
+                    <tr>
+                        <th scope="row">{{ $worker->id_worker }}</th>
+                        <td>{{ $worker->firstname }}</td>
+                        <td>{{ $worker->lastname }}</td>
+                        <tr>
+                    </tr>
+                    @endforeach
+                </tbody>
+                </table>
+                
+                {{ $workers->links() }}
             </div>
         </div>
     </div>

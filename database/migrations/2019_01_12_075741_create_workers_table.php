@@ -14,11 +14,11 @@ class CreateWorkersTable extends Migration
     public function up()
     {
         Schema::create('workers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_worker');
             // Foreign keys
-            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('id_user');
             
-            $table->foreign('user_id')
+            $table->foreign('id_user')
                   ->references('id')
                   ->on('users')
                   ->onDelete('cascade');
