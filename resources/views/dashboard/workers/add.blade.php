@@ -13,7 +13,7 @@
                     </div>
                 @endif
 
-                <h1>Workers View</h1>
+                <h1>Workers Add</h1>
             </div>
         </div>
     </div>
