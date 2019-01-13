@@ -29,7 +29,7 @@
                         <td><a href="{{ route('panel_workers_show', $worker->id_worker) }}">{{ $worker->firstname }} {{ $worker->lastname }}</a></td>
                     </tr>
                     @endforeach
-                </tbody>
+                    </tbody>
                 </table>
                 
                 {{ $workers->links() }}
