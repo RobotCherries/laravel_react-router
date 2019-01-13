@@ -95,7 +95,7 @@
                         </li>
                         <a href="{{ route('panel_index') }}" class="list-group-item">{{ __('Sumar') }}</a>
                         <a href="{{ route('panel_workers') }}" class="list-group-item">{{ __('Muncitori') }}</a>
-                        <a href="{{ route('panel_workers_add') }}" class="list-group-item">{{ __('Adaugă muncitor') }}</a>
+                        <a href="{{ route('panel_workers_create') }}" class="list-group-item">{{ __('Adaugă muncitor') }}</a>
                         <li class="list-group-item sidebar-separator"></li>
                         <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center">
                             <small>ACTIONS</small>

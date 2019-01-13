@@ -19,16 +19,14 @@
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First name</th>
-                            <th scope="col">Last name</th>
+                            <th scope="col">Full name</th>
                         </tr>
                     </thead>
                     <tbody>
                     @foreach ($workers as $worker)
                     <tr>
-                        <th>{{ $worker->id_worker }}</th>
-                        <td>{{ $worker->firstname }}</td>
-                        <td>{{ $worker->lastname }}</td>
+                        <th><a href="{{ route('panel_workers_show', $worker->id_worker) }}">{{ $worker->id_worker }}</a></th>
+                        <td><a href="{{ route('panel_workers_show', $worker->id_worker) }}">{{ $worker->firstname }} {{ $worker->lastname }}</a></td>
                     </tr>
                     @endforeach
                 </tbody>

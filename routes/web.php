@@ -25,9 +25,9 @@ Route::get('/pontare', 'ClockingController@index')->name('clocking');
 
 Route::prefix('panou')->group(function () {
     Route::get('/', 'DashboardController@index')->name('panel_index');
-    Route::get('/index', 'DashboardController@index')->name('panel_index');
     Route::get('/muncitori', 'WorkersController@index')->name('panel_workers');
-    Route::get('/muncitori/adauga', 'WorkersController@add')->name('panel_workers_add');
+    Route::get('/muncitori/adauga', 'WorkersController@create')->name('panel_workers_create');
+    Route::get('/muncitori/{id}', 'WorkersController@show')->name('panel_workers_show');
 });
 
 Route::get('/setari', 'SettingsController@index')->name('settings');

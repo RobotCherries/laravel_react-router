@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\DB;
+
+use App\Worker;
 
 class WorkersController extends Controller
 {
@@ -28,7 +31,7 @@ class WorkersController extends Controller
     {
         $workers = DB::table('workers')->simplePaginate(4);
 
-        return view('dashboard.workers.view', ['workers' => $workers]);
+        return view('dashboard.workers.index', ['workers' => $workers]);
     }
 
     /**
@@ -36,9 +39,9 @@ class WorkersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function add()
+    public function create()
     {
-        return view('dashboard.workers.add');
+        return view('dashboard.workers.create');
     }
 
     /**
@@ -60,7 +63,9 @@ class WorkersController extends Controller
      */
     public function show($id)
     {
-        //
+        $worker = Worker::findOrFail($id);
+
+        return view('dashboard.workers.show')->with('worker', $worker);
     }
 
     /**
