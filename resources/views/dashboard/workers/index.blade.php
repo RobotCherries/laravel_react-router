@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-<div class="row justify-content-center">
+<div class="row">
     <div class="col-lg-10">
         <div class="card">
             <div class="card-header">Dashboard</div>
@@ -26,6 +26,7 @@
                     @foreach ($workers as $worker)
                     <tr>
                         <th><a href="{{ route('panel_workers_show', $worker->id_worker) }}">{{ $worker->id_worker }}</a></th>
+                        <td><a href="{{ route('panel_workers_show', $worker->id_worker) }}">{{ $worker->firstname }} {{ $worker->lastname }}</a></td>
                         <td><a href="{{ route('panel_workers_show', $worker->id_worker) }}">{{ $worker->firstname }} {{ $worker->lastname }}</a></td>
                     </tr>
                     @endforeach
