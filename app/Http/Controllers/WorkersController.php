@@ -29,7 +29,10 @@ class WorkersController extends Controller
      */
     public function index()
     {
-        $workers = DB::table('workers')->simplePaginate(4);
+        $workers = DB::table('workers')
+        ->join('departments', 'workers.id_department', '=', 'departments.id_department')
+        ->select('workers.*', 'departments.department_name')
+        ->simplePaginate(4);
 
         return view('dashboard.workers.index', ['workers' => $workers]);
     }
